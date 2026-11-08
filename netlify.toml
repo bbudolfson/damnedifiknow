@@ -6,3 +6,10 @@
   for = "/data/*"
   [headers.values]
     Cache-Control = "public, max-age=0, must-revalidate"
+
+# Hidden from search engines for now. Delete this block (and the robots
+# meta tag in index.html) to make the site searchable.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"

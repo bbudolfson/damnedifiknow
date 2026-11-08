@@ -18,3 +18,12 @@ Then open http://localhost:8765. You can't open `index.html` directly, because t
 ## Deploy
 
 Netlify deploys from `main` on every push (see `netlify.toml`).
+
+## Search engines
+
+The site is hidden from search engines for now. Anyone with the link can still open it. To make it searchable, remove:
+
+- the `<meta name="robots" ...>` line in `index.html`
+- the `X-Robots-Tag` block in `netlify.toml`
+
+There's intentionally no `robots.txt` blocking crawlers. Search engines have to be able to crawl a page to see the noindex instruction.
