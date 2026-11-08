@@ -1,0 +1,8 @@
+# Static site: no build step, publish the repo root.
+[build]
+  publish = "."
+
+[[headers]]
+  for = "/data/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
